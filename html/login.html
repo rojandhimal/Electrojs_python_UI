@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="login-title-bar">
+
+        <div id="login-title">Login</div>
+        <div class="login-title-bar-btns">
+            <div id="login-minm-btn" class="login-minm-btn">-</div>
+            <div id="login-close-btn" class="login-close-btn">x</div>
+        </div>
+    </div>
+
+
+    <div class="login-loading-mask-wrapper" id="login-loading-mask-wrapper">
+        <div class="login-content-wrapper">
+            <div class="login-main-logo"></div>
+            <h2 class="login-main-logo-title">Rojan Dhimal</h2>
+
+            <div class="login-input-group">
+                <!-- when error occur msg is displayed here -->
+                <label for="" class="login-show-error" id='login-show-error'>hode this later</label>
+                <!-- username -->
+                <div class="login-input-icon-username login-input-icon-username-bg">
+                    <input type="text" placeholder="username" id='login-username'>
+                    <icon class="fa fa-user fa-lg fa-fw" area-hidden='true'></icon>
+                </div>
+
+                <!-- password -->
+                <div class="login-input-icon-password login-input-icon-password-bg">
+                    <input type="password" placeholder="password" id='login-password'>
+                    <icon class="fa fa-shield fa-lg fa-fw" area-hidden='true'></icon>
+                    <!-- hide or show password -->
+                    <iconEye id="login-toggle-password" class="fa fa-fw fa-eye-slash login-hide-show-password-icon"></iconEye>
+                </div>
+                <!-- forgot password -->
+                <div class="login-forgot-password">
+                    <h2 class="forgotLoginPassword" id="forgotLoginPassword">forgot password?</h2>
+                </div>
+                <!-- signin or signup -->
+                <div class="signin-or-signup-btns">
+                    <button class="signup-btn" id="signup-btn">new user?</button>
+                    <div class="signin-btn-with-loading-group">
+                        <button class="signin-btn" id="signin-btn">Signin</button>
+                        <button class="signin-loading-spinner-container" id="signin-loading-spinner-container">
+                            <div class="signin-loading-spinner"></div>
+                        </button>
+                    </div>
+                </div>
+                    <!-- remember me -->
+                <div class="login-remember-me-container">
+                    <label for="" class="login-remember-me-label">Remember me</label>
+                    <label for="" class="login-remember-me-group">
+                        <input type="checkbox" id='login-remember-me-btn'>
+                        <span class="login-remember-me-checkmark" id="login-remember-me-checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

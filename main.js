@@ -5,15 +5,34 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
+    width: 300,
     height: 600,
+    maxHeight: 600,
+    maxWidth: 300,
+
+    // for frameless window this will hide the titlebar
+    frame: false,
+    titleBarStyle: "hidden",
+
+    // our login dont want to be resizable
+    resizable: false,
+
+    // also dont want ot be maximize
+    maximizable:false,
+
+    // setting background
+    backgroundColor: '#202121',
+
+
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      // this will prevent error
+      NodeIterator: true
     }
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('./html/login.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
